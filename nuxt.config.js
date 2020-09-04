@@ -14,7 +14,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'Sheikah',
+    title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -29,12 +29,15 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    './node_modules/element-ui/packages/theme-chalk/src/button.scss',
+    '@/styles/main.scss',
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{ src: '~/plugins/element-ui.js', ssr: true }],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
