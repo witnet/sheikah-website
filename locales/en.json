@@ -11,7 +11,6 @@
   },
   "title_1": "Get Sheikah,",
   "title_2": " your Witnet wallet",
-  "download_linux": "Download Sheikah for GNU/Linux",
-  "download_mac": "Download Sheikah for macOS",
+  "download": "Download Sheikah for {platform}",
   "source_code": "Check out the source code on {github}"
 }

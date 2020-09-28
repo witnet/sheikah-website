@@ -20,17 +20,13 @@
       <p class="description">{{ $t('description') }}</p>
 
       <div class="links">
-        <a
-          href="https://github.com/witnet/sheikah/releases/download/0.2.0/sheikah-witnet-wallet-0.2.0.AppImage"
-          download="Sheikah GNU/Linux"
-        >
+        <a class="link" :href="releaseUrl" :download="downloadName">
           <ElButton class="btn" type="primary">
-            {{ $t('download_linux') }}
-          </ElButton>
-        </a>
-        <a class="link" href="" download="Sheikah macOS">
-          <ElButton class="btn" type="primary">
-            {{ $t('download_mac') }}
+            <i18n path="download" tag="span">
+              <template v-slot:platform>
+                <span>{{ platform }}</span>
+              </template>
+            </i18n>
           </ElButton>
         </a>
       </div>
@@ -45,7 +41,34 @@
 </template>
 
 <script>
+import { RELEASE } from '@/constants'
+import { getBrowserOs } from '@/getBrowserOs'
+
 export default {
+  data() {
+    const browserOs = getBrowserOs()
+    const releaseUrl = RELEASE[browserOs.toUpperCase()]
+    const platforms = {
+      win: {
+        platform: 'Windows',
+        releaseUrl,
+        downloadName: `sheikah-mac.exe`,
+      },
+      mac: {
+        platform: 'Mac OS',
+        releaseUrl,
+        downloadName: `sheikah-mac.dmg`,
+      },
+      linux: {
+        platform: 'GNU / Linux',
+        releaseUrl,
+        downloadName: `sheikah-linux.AppImage`,
+      },
+    }
+    return {
+      ...platforms[browserOs.toLowerCase()],
+    }
+  },
   head() {
     return {
       title: this.$t('head.title'),
