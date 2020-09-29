@@ -4,6 +4,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-mode
    */
   mode: 'spa',
+  router: {
+    middleware: 'i18n',
+  },
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -37,7 +40,11 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '~/plugins/element-ui.js', ssr: true }],
+  plugins: [
+    { src: '~/plugins/i18n.js', ssr: false },
+    { src: '~/plugins/element-ui.js', ssr: true },
+  ],
+
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -59,4 +66,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  generate: {
+    routes: ['/', '/es', '/en'],
+  },
 }
