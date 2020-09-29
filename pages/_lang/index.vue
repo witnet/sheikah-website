@@ -36,7 +36,11 @@
         </template>
       </i18n>
     </div>
-    <img class="app-image" src="~/assets/svg/app-image.svg" alt="app image" />
+    <img
+      class="app-image"
+      src="~/assets/png/sheikah-app-image.png"
+      alt="app image"
+    />
   </div>
 </template>
 
@@ -93,7 +97,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url(../../assets/svg/sheikah-icon-in-background.png) right
+  background: url(../../assets/png/sheikah-icon-in-background.png) right
     no-repeat;
   .left-column {
     max-width: 500px;
@@ -101,6 +105,7 @@ export default {
   .app-image {
     width: 600px;
     margin-left: 112px;
+    box-shadow: 0px 6px 30px 5px rgba(155, 81, 224, 0.25);
   }
   .header {
     display: flex;
@@ -135,8 +140,9 @@ export default {
   .links {
     display: flex;
     margin-top: 24px;
+    width: 100%;
     .link {
-      margin-left: 8px;
+      width: 100%;
     }
   }
   .footer {

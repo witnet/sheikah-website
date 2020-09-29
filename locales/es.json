@@ -10,7 +10,6 @@
     "wallet": "Wallet"
   },
   "title": "Descarga Sheikah, tu Witnet wallet",
-  "download_linux": "Descargar Sheikah para GNU/Linux",
-  "download_mac": "Descargar Sheikah para macOS",
+  "download": "Descargar Sheikah para {platform}",
   "source_code": "Comprueba el código fuente en {github}"
 }
