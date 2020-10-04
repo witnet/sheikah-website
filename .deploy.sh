@@ -5,7 +5,7 @@
 set -e
 
 # build
-npm run generate 
+npm run generate
 
 # navigate into the build output directory
 cd dist
