@@ -16,15 +16,17 @@
         {{ $t('title_1') }} <br />
         {{ $t('title_2') }}
       </h2>
-
       <p class="description">{{ $t('description') }}</p>
-
       <div class="links">
-        <a class="link" :href="releaseUrl" :download="downloadName">
+        <a
+          class="link"
+          :href="release.releaseUrl"
+          :download="release.downloadName"
+        >
           <ElButton class="btn" type="primary">
             <i18n path="download" tag="span">
               <template v-slot:platform>
-                <span>{{ platform }}</span>
+                <span>{{ release.platform }}</span>
               </template>
             </i18n>
           </ElButton>
@@ -45,34 +47,12 @@
 </template>
 
 <script>
-import { RELEASE } from '@/constants'
-import { getBrowserOs } from '@/getBrowserOs'
+import { getLatestRelease } from '@/getLatestRelease'
 
 export default {
-  data() {
-    const browserOs = getBrowserOs()
-    const releaseUrl = RELEASE[browserOs.toUpperCase()]
-    const platforms = {
-      win: {
-        platform: 'Windows',
-        releaseUrl,
-        downloadName: `sheikah-mac.exe`,
-      },
-      mac: {
-        platform: 'Mac OS',
-        releaseUrl,
-        downloadName: `sheikah-mac.dmg`,
-      },
-      linux: {
-        platform: 'GNU / Linux',
-        releaseUrl,
-        downloadName: `sheikah-linux.AppImage`,
-      },
-    }
-    return {
-      ...platforms[browserOs.toLowerCase()],
-    }
-  },
+  asyncData: async () => ({
+    release: await getLatestRelease(),
+  }),
   head() {
     return {
       title: this.$t('head.title'),
