@@ -6,11 +6,11 @@
   },
   "description": "Sheikah keeps your Witnet tokens safe and helps you build, share and deploy data requests into the Witnet network.",
   "logo": {
+    "template": "{0} {1}",
     "sheikah": "Sheikah",
     "wallet": "Wallet"
   },
-  "title_1": "Get Sheikah,",
-  "title_2": " your Witnet wallet",
+  "title": "Get Sheikah,{0} your Witnet wallet.",
   "download": "Download Sheikah for {platform}",
   "source_code": "Check out the source code on {github}"
 }
