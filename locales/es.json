@@ -9,7 +9,8 @@
     "sheikah": "Sheikah",
     "wallet": "Wallet"
   },
-  "title": "Descarga Sheikah, tu Witnet wallet",
+  "title_1": "Get Sheikah,",
+  "title_2": " your Witnet wallet",
   "download": "Descargar Sheikah para {platform}",
   "source_code": "Comprueba el código fuente en {github}"
 }
