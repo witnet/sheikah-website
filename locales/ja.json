@@ -1,16 +1,16 @@
 {
   "head": {
-    "description": "Download Sheikah, the desktop app that keeps your Witnet tokens safe and helps you build, share and deploy data requests into the Witnet network.",
-    "title": "Sheikahをダウンロード",
-    "name": "Sheikahウォレットをダウンロード"
+    "description": "",
+    "title": "",
+    "name": ""
   },
-  "description": "Sheikah keeps your Witnet tokens safe and helps you build, share and deploy data requests into the Witnet network.",
+  "description": "",
   "logo": {
-    "sheikah": "Sheikah",
-    "wallet": "ウォレット"
+    "template": "",
+    "sheikah": "",
+    "wallet": ""
   },
-  "title_1": "Get Sheikah,",
-  "title_2": " your Witnet wallet",
-  "download": "{platform} 用の Sheikah をダウンロード",
-  "source_code": "{github} でソースコードを確認する"
+  "title": "",
+  "download": "",
+  "source_code": ""
 }
