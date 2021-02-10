@@ -11,6 +11,6 @@
     "wallet": "ウォレット"
   },
   "title": "今すぐSheikahをダウンロード 。{0}あなたのウィットネットウォレット。",
-  "download": "{platform} 用の Sheikah をダウンロード",
-  "source_code": "{github} でソースコードを確認する"
+  "download": "{platform}用の Sheikah をダウンロード",
+  "source_code": "{github}でソースコードを確認する"
 }
