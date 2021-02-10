@@ -1,0 +1,16 @@
+{
+  "head": {
+    "description": "Download Sheikah, the desktop app that keeps your Witnet tokens safe and helps you build, share and deploy data requests into the Witnet network.",
+    "title": "Get Sheikah",
+    "name": "Get Sheikah wallet"
+  },
+  "description": "Sheikah keeps your Witnet tokens safe and helps you build, share and deploy data requests into the Witnet network.",
+  "logo": {
+    "sheikah": "Sheikah",
+    "wallet": "Wallet"
+  },
+  "title_1": "Get Sheikah,",
+  "title_2": " your Witnet wallet",
+  "download": "Download Sheikah for {platform}",
+  "source_code": "Check out the source code on {github}"
+}
