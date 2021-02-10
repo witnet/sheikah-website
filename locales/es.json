@@ -1,15 +1,16 @@
 {
   "head": {
-    "description": "Descarga Sheikah, la aplicación de escritorio que mantiene tus Witnet tokens seguros y te ayuda a construir, compartir y desplegar data requests en la red Witnet",
+    "description": "Descarga Sheikah, la aplicación de escritorio que mantiene tus tokens de Witnet seguros y te ayuda a construir, compartir y desplegar data requests en la red de Witnet.",
     "title": "Descarga Sheikah",
     "name": "Descarga Sheikah wallet"
   },
   "description": "Sheikah mantiene tus tokens seguros y te ayuda a construir, compartir y desplegar data requests en la red Witnet.",
   "logo": {
+    "template": "{0} {1}",
     "sheikah": "Sheikah",
     "wallet": "Wallet"
   },
-  "title": "Descarga Sheikah, tu Witnet wallet",
+  "title": "Descarga Sheikah,{0}tu wallet para Witnet.",
   "download": "Descargar Sheikah para {platform}",
   "source_code": "Comprueba el código fuente en {github}"
 }
