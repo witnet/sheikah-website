@@ -10,7 +10,7 @@
     "sheikah": "Sheikah",
     "wallet": "Wallet"
   },
-  "title": "Get Sheikah,{0} your Witnet wallet.",
+  "title": "Get Sheikah,{0}your Witnet wallet.",
   "download": "Download Sheikah for {platform}",
   "source_code": "Check out the source code on {github}"
 }
