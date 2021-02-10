@@ -7,15 +7,14 @@
           alt="sheikah logo"
           class="logo"
         />
-        <h1 class="logo-title">
-          {{ $t('logo.sheikah') }}
+        <i18n tag="h1" path="logo.template" class="logo-title">
+          <span>{{ $t('logo.sheikah') }}</span>
           <span class="wallet">{{ $t('logo.wallet') }}</span>
-        </h1>
+        </i18n>
       </div>
-      <h2 class="title">
-        {{ $t('title_1') }} <br />
-        {{ $t('title_2') }}
-      </h2>
+      <i18n tag="h2" path="title" class="title">
+        <br />
+      </i18n>
       <p class="description">{{ $t('description') }}</p>
       <div class="links">
         <a
