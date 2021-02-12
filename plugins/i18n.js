@@ -12,6 +12,7 @@ export default ({ app }) => {
       es: require('~/locales/es.json'),
       it: require('~/locales/it.json'),
       ja: require('~/locales/ja.json'),
+      zh: require('~/locales/zh.json'),
     },
   })
 }
