@@ -1,0 +1,16 @@
+{
+  "head": {
+    "description": "下载Sheikah——保证您的Witnet数字代币安全并帮助您构建、分享和部署数据请求到Witnet网络的桌面应用。",
+    "title": "下载Sheikah",
+    "name": "下载Sheikah钱包"
+  },
+  "description": "Sheikah保证您的Witnet数字代币安全并帮助您构建、分享和部署数据请求到Witnet网络。",
+  "logo": {
+    "template": "{0}{1}",
+    "sheikah": "Sheikah",
+    "wallet": "钱包"
+  },
+  "title": "下载Sheikah，{0}您的Witnet钱包。",
+  "download": "下载适用于{platform}的Sheikah",
+  "source_code": "查看 {github} 上的源代码"
+}
