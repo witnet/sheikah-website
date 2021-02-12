@@ -10,7 +10,7 @@
     "sheikah": "Sheikah",
     "wallet": "钱包"
   },
-  "title": "下载Sheikah，{0}您的Witnet钱包。",
+  "title": "下载Sheikah{0}——您的Witnet钱包",
   "download": "下载适用于{platform}的Sheikah",
   "source_code": "查看 {github} 上的源代码"
 }
