@@ -68,6 +68,6 @@ export default {
    */
   build: {},
   generate: {
-    routes: ['/', '/es', '/en'],
+    routes: ['/', '/en', '/es', '/it', '/ja', '/zh'],
   },
 }
