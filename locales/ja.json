@@ -10,7 +10,7 @@
     "sheikah": "Sheikah",
     "wallet": "ウォレット"
   },
-  "title": "Sheikahはあなたの{0}Witnetウォレット。",
+  "title": "SheikahはあなたのWitnetウォレットです。",
   "download": "{platform}用の Sheikah をダウンロード",
   "source_code": "{github}でソースコードを確認する"
 }
