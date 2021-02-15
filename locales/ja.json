@@ -6,11 +6,11 @@
   },
   "description": "SheikahはあなたのWitnetトークンを安全に保ちまして、Witnetネットワークへのデータリクエストの作成して、共有sじょて、展開も支援します。",
   "logo": {
-    "template": "{0} {1}",
+    "template": "{0}{1}",
     "sheikah": "Sheikah",
     "wallet": "ウォレット"
   },
-  "title": "今すぐSheikahをダウンロード 。{0}あなたのウィットネットウォレット。",
+  "title": "Sheikahをダウンロード 。{0}あなたのWitnetウォレット。",
   "download": "{platform}用の Sheikah をダウンロード",
   "source_code": "{github}でソースコードを確認する"
 }
