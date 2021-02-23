@@ -17,19 +17,7 @@
       </i18n>
       <p class="description">{{ $t('description') }}</p>
       <div class="links">
-        <a
-          class="link"
-          :href="release.releaseUrl"
-          :download="release.downloadName"
-        >
-          <ElButton class="btn" type="primary">
-            <i18n path="download" tag="span">
-              <template v-slot:platform>
-                <span>{{ release.platform }}</span>
-              </template>
-            </i18n>
-          </ElButton>
-        </a>
+        <Download />
       </div>
       <i18n path="source_code" tag="p" class="footer">
         <template v-slot:github>
@@ -46,12 +34,7 @@
 </template>
 
 <script>
-import { getLatestRelease } from '@/getLatestRelease'
-
 export default {
-  asyncData: async () => ({
-    release: await getLatestRelease(),
-  }),
   head() {
     return {
       title: this.$t('head.title'),

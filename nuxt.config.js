@@ -3,7 +3,6 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'spa',
   router: {
     base: '/',
     middleware: 'i18n',
@@ -41,10 +40,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [
-    { src: '~/plugins/i18n.js', ssr: false },
-    { src: '~/plugins/element-ui.js', ssr: true },
-  ],
+  plugins: [{ src: '~/plugins/i18n.js' }, { src: '~/plugins/element-ui.js' }],
 
   /*
    ** Auto import components

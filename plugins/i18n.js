@@ -3,9 +3,8 @@ import VueI18n from 'vue-i18n'
 
 Vue.use(VueI18n)
 
-export default ({ app }) => {
+export default ({ app, store }) => {
   app.i18n = new VueI18n({
-    locale: navigator.language || navigator.languages[0],
     fallbackLocale: 'en',
     messages: {
       en: require('~/locales/en.json'),
@@ -15,4 +14,8 @@ export default ({ app }) => {
       zh: require('~/locales/zh.json'),
     },
   })
+
+  if (process.client) {
+    app.i18n.locale = store.state.locale
+  }
 }
