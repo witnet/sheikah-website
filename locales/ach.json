@@ -1,0 +1,16 @@
+{
+  "head": {
+    "description": "crwdns2384:0crwdne2384:0",
+    "title": "crwdns2386:0crwdne2386:0",
+    "name": "crwdns2388:0crwdne2388:0"
+  },
+  "description": "crwdns2390:0crwdne2390:0",
+  "logo": {
+    "template": "crwdns2404:0{0}crwdnd2404:0{1}crwdne2404:0",
+    "sheikah": "crwdns2392:0crwdne2392:0",
+    "wallet": "crwdns2394:0crwdne2394:0"
+  },
+  "title": "crwdns2408:0{0}crwdne2408:0",
+  "download": "crwdns2400:0{platform}crwdne2400:0",
+  "source_code": "crwdns2402:0{github}crwdne2402:0"
+}
