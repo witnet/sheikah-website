@@ -1,12 +1,12 @@
+import { languages, fallbackLocale } from './constants'
+
 export default {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'spa',
   router: {
     base: '/',
-    middleware: 'i18n',
   },
   /*
    ** Nuxt target
@@ -25,8 +25,21 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: process.env.npm_package_description || 'Get Sheikah wallet',
       },
+
+      { name: 'theme-color', content: '#b566ff' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:title', content: 'Get Sheikah' },
+      {
+        name: 'og:description',
+        content:
+          '"Download Sheikah, the desktop app that keeps your Witnet tokens safe and helps you build, share and deploy data requests into the Witnet network.',
+      },
+      { name: 'og:image', content: '/sheikah.ico' },
+      { name: 'og:url', content: 'https://sheikah.app' },
+      { name: 'og:locale:alternate', content: 'es_ES' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/sheikah.ico' }],
   },
@@ -41,10 +54,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [
-    { src: '~/plugins/i18n.js', ssr: false },
-    { src: '~/plugins/element-ui.js', ssr: true },
-  ],
+  plugins: [{ src: '~/plugins/element-ui.js', ssr: true }],
 
   /*
    ** Auto import components
@@ -61,13 +71,32 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['nuxt-i18n'],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
-  generate: {
-    routes: ['/', '/en', '/es', '/it', '/ja', '/zh'],
+  i18n: {
+    // add SEO attributes in layout head for better performance
+    seo: false,
+    locales: languages,
+    vueI18n: {
+      fallbackLocale,
+      messages: {
+        en: require('./locales/en.json'),
+        es: require('./locales/es.json'),
+        it: require('./locales/it.json'),
+        ja: require('./locales/ja.json'),
+        zh: require('./locales/zh.json'),
+      },
+    },
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true,
+      alwaysRedirect: true,
+    },
+    strategy: 'prefix_and_default',
   },
 }
