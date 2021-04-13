@@ -37,7 +37,7 @@ export default {
         content:
           'Download Sheikah, the desktop app that keeps your Witnet tokens safe and helps you build, share and deploy data requests into the Witnet network.',
       },
-      { name: 'og:image', content: '/sheikah.ico' },
+      { name: 'og:image', content: '/sheikah.png' },
       { name: 'og:url', content: 'https://sheikah.app' },
       { name: 'og:locale:alternate', content: 'es_ES' },
     ],
