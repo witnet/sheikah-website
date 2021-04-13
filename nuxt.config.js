@@ -18,14 +18,14 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Get Sheikah, your Witnet wallet.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || 'Get Sheikah wallet',
+        content: 'Get Sheikah wallet',
       },
 
       { name: 'theme-color', content: '#b566ff' },
