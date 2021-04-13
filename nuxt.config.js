@@ -97,6 +97,6 @@ export default {
       onlyOnRoot: true,
       alwaysRedirect: true,
     },
-    strategy: 'prefix_and_default',
+    defaultLocale: 'en',
   },
 }
