@@ -119,6 +119,5 @@ export default {
       onlyOnRoot: true,
       alwaysRedirect: true,
     },
-    defaultLocale: 'en',
   },
 }
