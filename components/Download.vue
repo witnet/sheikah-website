@@ -5,13 +5,13 @@
     :href="release.releaseUrl"
     :download="release.downloadName"
   >
-    <ElButton class="btn" type="primary">
+    <button class="btn">
       <i18n path="download" tag="span">
         <template v-slot:platform>
           <span>{{ release.platform }}</span>
         </template>
       </i18n>
-    </ElButton>
+    </button>
   </a>
   <a
     v-else
@@ -42,4 +42,33 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+@import '../styles/colors.scss';
+
+.btn {
+  background-color: $purple-0;
+  border-color: $purple-0;
+  border-radius: 4px;
+  border: 0;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  min-height: 60px;
+  outline: 0;
+  padding: 12px 20px;
+  text-align: center;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    background: $purple-6;
+    border-color: $purple-6;
+  }
+  &:active {
+    border-color: $purple-3;
+  }
+}
+</style>

@@ -68,15 +68,12 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    './node_modules/element-ui/packages/theme-chalk/src/button.scss',
-    '@/styles/main.scss',
-  ],
+  css: ['@/styles/main.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '~/plugins/element-ui.js', ssr: true }],
+  plugins: [],
 
   /*
    ** Auto import components
