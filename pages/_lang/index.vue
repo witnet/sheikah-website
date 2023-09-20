@@ -34,7 +34,12 @@
 </template>
 
 <script>
+import Download from '../../components/Download.vue'
+
 export default {
+  comments: {
+    Download,
+  },
   head() {
     return {
       title: this.$t('head.title'),
