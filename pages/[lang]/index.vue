@@ -7,23 +7,23 @@
           alt="sheikah logo"
           class="logo"
         />
-        <i18n tag="h1" path="logo.template" class="logo-title">
+        <i18n-t tag="h1" keypath="logo.template" class="logo-title">
           <span>{{ $t('logo.sheikah') }}</span>
           <span class="wallet">{{ $t('logo.wallet') }}</span>
-        </i18n>
+        </i18n-t>
       </div>
-      <i18n tag="h2" path="title" class="title">
+      <i18n-t tag="h2" keypath="title" class="title">
         <br />
-      </i18n>
+      </i18n-t>
       <p class="description">{{ $t('description') }}</p>
       <div class="links">
-        <Download />
+          <Download />
       </div>
-      <i18n path="source_code" tag="p" class="footer">
+      <i18n-t keypath="source_code" tag="p" class="footer">
         <template v-slot:github>
           <a href="https://github.com/witnet/sheikah">Github</a>
         </template>
-      </i18n>
+      </i18n-t>
     </div>
     <img
       class="app-image"
@@ -81,7 +81,7 @@ export default {
       margin-left: 16px;
       font-size: 2em;
       color: $alt-grey;
-      font-weight: bold;
+      font-weight: 200;
       font-family: 'Catamaran';
       .wallet {
         font-weight: normal;
@@ -93,7 +93,7 @@ export default {
     font-family: 'Raleway';
     text-align: left;
     font-size: 3em;
-    font-weight: bolder;
+    font-weight: 700;
     margin-top: 32px;
     max-width: 500px;
   }

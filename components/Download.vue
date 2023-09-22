@@ -6,11 +6,11 @@
     :download="release.downloadName"
   >
     <button class="btn">
-      <i18n path="download" tag="span">
+      <i18n-t keypath="download" tag="span">
         <template v-slot:platform>
           <span>{{ release.platform }}</span>
         </template>
-      </i18n>
+      </i18n-t>
     </button>
   </a>
   <a
@@ -18,28 +18,22 @@
     class="link"
     href="https://github.com/witnet/sheikah/releases/latest"
   >
-    <ElButton class="btn" type="primary">{{ $t('head.name') }}</ElButton>
+    <button class="btn" type="primary">{{ $t('head.name') }}</button>
   </a>
 </template>
 
-<script>
+<script setup>
 import { getLatestRelease } from '@/getLatestRelease'
+import { onBeforeMount } from 'vue'
+const release = ref({
+    releaseUrl: '',
+    downloadName: '',
+    platform: '',
+})
 
-export default {
-  async fetch() {
-    this.release = await getLatestRelease(navigator)
-  },
-  fetchOnServer: false,
-  data() {
-    return {
-      release: {
-        releaseUrl: '',
-        downloadName: '',
-        platform: '',
-      },
-    }
-  },
-}
+onBeforeMount(async () => {
+  release.value = await getLatestRelease(navigator)
+})
 </script>
 
 <style lang="scss">
