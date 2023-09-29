@@ -1,3 +1,18 @@
+<script setup>
+import { onBeforeMount } from 'vue'
+import { getLatestRelease } from '@/getLatestRelease'
+
+const release = ref({
+  releaseUrl: '',
+  downloadName: '',
+  platform: '',
+})
+
+onBeforeMount(async () => {
+  release.value = await getLatestRelease(navigator)
+})
+</script>
+
 <template>
   <a
     v-if="release.platform"
@@ -6,11 +21,11 @@
     :download="release.downloadName"
   >
     <button class="btn">
-      <i18n path="download" tag="span">
-        <template v-slot:platform>
+      <i18n-t keypath="download" tag="span">
+        <template #platform>
           <span>{{ release.platform }}</span>
         </template>
-      </i18n>
+      </i18n-t>
     </button>
   </a>
   <a
@@ -18,29 +33,9 @@
     class="link"
     href="https://github.com/witnet/sheikah/releases/latest"
   >
-    <ElButton class="btn" type="primary">{{ $t('head.name') }}</ElButton>
+    <button class="btn" type="primary">{{ $t('head.name') }}</button>
   </a>
 </template>
-
-<script>
-import { getLatestRelease } from '@/getLatestRelease'
-
-export default {
-  async fetch() {
-    this.release = await getLatestRelease(navigator)
-  },
-  fetchOnServer: false,
-  data() {
-    return {
-      release: {
-        releaseUrl: '',
-        downloadName: '',
-        platform: '',
-      },
-    }
-  },
-}
-</script>
 
 <style lang="scss">
 @import '../styles/colors.scss';
