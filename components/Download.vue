@@ -1,3 +1,18 @@
+<script setup>
+import { onBeforeMount } from 'vue'
+import { getLatestRelease } from '@/getLatestRelease'
+
+const release = ref({
+  releaseUrl: '',
+  downloadName: '',
+  platform: '',
+})
+
+onBeforeMount(async () => {
+  release.value = await getLatestRelease(navigator)
+})
+</script>
+
 <template>
   <a
     v-if="release.platform"
@@ -7,7 +22,7 @@
   >
     <button class="btn">
       <i18n-t keypath="download" tag="span">
-        <template v-slot:platform>
+        <template #platform>
           <span>{{ release.platform }}</span>
         </template>
       </i18n-t>
@@ -21,20 +36,6 @@
     <button class="btn" type="primary">{{ $t('head.name') }}</button>
   </a>
 </template>
-
-<script setup>
-import { getLatestRelease } from '@/getLatestRelease'
-import { onBeforeMount } from 'vue'
-const release = ref({
-    releaseUrl: '',
-    downloadName: '',
-    platform: '',
-})
-
-onBeforeMount(async () => {
-  release.value = await getLatestRelease(navigator)
-})
-</script>
 
 <style lang="scss">
 @import '../styles/colors.scss';

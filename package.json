@@ -1,23 +1,26 @@
 {
   "name": "sheikah-website",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "npx nuxi dev",
     "build": "npx nuxi build",
-    "lint": "yarn lint:js",
+    "lint": "eslint .",
     "generate": "nuxt generate",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "start": "nuxt start"
   },
   "dependencies": {
+    "@antfu/eslint-config": "^1.0.0-beta.17",
     "@intlify/unplugin-vue-i18n": "^1.2.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
     "axios": "^0.21.0",
     "nuxt": "^3.7.3",
     "vue-i18n": "^9.4.1"
   },
   "devDependencies": {
+    "eslint": "^8.50.0",
     "sass": "^1.67.0"
   },
   "volta": {

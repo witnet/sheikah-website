@@ -1,38 +1,3 @@
-<template>
-  <div class="container">
-    <div class="left-column">
-      <div class="header">
-        <img
-          src="~/assets/svg/sheikah-icon.svg"
-          alt="sheikah logo"
-          class="logo"
-        />
-        <i18n-t tag="h1" keypath="logo.template" class="logo-title">
-          <span>{{ $t('logo.sheikah') }}</span>
-          <span class="wallet">{{ $t('logo.wallet') }}</span>
-        </i18n-t>
-      </div>
-      <i18n-t tag="h2" keypath="title" class="title">
-        <br />
-      </i18n-t>
-      <p class="description">{{ $t('description') }}</p>
-      <div class="links">
-          <Download />
-      </div>
-      <i18n-t keypath="source_code" tag="p" class="footer">
-        <template v-slot:github>
-          <a href="https://github.com/witnet/sheikah">Github</a>
-        </template>
-      </i18n-t>
-    </div>
-    <img
-      class="app-image"
-      src="~/assets/png/sheikah-app-image.png"
-      alt="app image"
-    />
-  </div>
-</template>
-
 <script>
 import Download from '../../components/Download.vue'
 
@@ -53,6 +18,43 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div class="container">
+    <div class="left-column">
+      <div class="header">
+        <img
+          src="~/assets/svg/sheikah-icon.svg"
+          alt="sheikah logo"
+          class="logo"
+        >
+        <i18n-t tag="h1" keypath="logo.template" class="logo-title">
+          <span>{{ $t('logo.sheikah') }}</span>
+          <span class="wallet">{{ $t('logo.wallet') }}</span>
+        </i18n-t>
+      </div>
+      <i18n-t tag="h2" keypath="title" class="title">
+        <br>
+      </i18n-t>
+      <p class="description">
+        {{ $t('description') }}
+      </p>
+      <div class="links">
+        <Download />
+      </div>
+      <i18n-t keypath="source_code" tag="p" class="footer">
+        <template #github>
+          <a href="https://github.com/witnet/sheikah">Github</a>
+        </template>
+      </i18n-t>
+    </div>
+    <img
+      class="app-image"
+      src="~/assets/png/sheikah-app-image.png"
+      alt="app image"
+    >
+  </div>
+</template>
 
 <style lang="scss">
 @import '@/styles/colors.scss';
