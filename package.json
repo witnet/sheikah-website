@@ -1,34 +1,35 @@
 {
   "name": "sheikah-website",
-  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "lint": "yarn lint:js",
-    "dev": "nuxt",
-    "generate": "nuxt generate",
-    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "start": "nuxt start"
-  },
-  "dependencies": {
-    "axios": "^0.21.0",
-    "nuxt": "^2.14.12",
-    "nuxt-i18n": "^6.23.0",
-    "sass": "^1.66.1",
-    "sass-loader": "^10.0.2"
+    "dev": "nuxt dev",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare",
+    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "pnpm run  lint:js && pnpm run lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
   },
   "devDependencies": {
-    "@intlify/vue-i18n-loader": "^1.0.0",
-    "@nuxtjs/eslint-config": "^3.1.0",
-    "@nuxtjs/eslint-module": "^2.0.0",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-component": "^1.1.1",
-    "eslint": "^7.5.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-nuxt": "^1.0.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.0.5",
-    "vue-cli-plugin-i18n": "~1.0.1"
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/i18n": "^8.5.5",
+    "@types/node": "^18",
+    "@typescript-eslint/parser": "^5.59.5",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "nuxt": "^3.12.4",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.7",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:witnet/sheikah-website.git"
   }
 }

@@ -1,24 +1,13 @@
 export const languages = [
   {
     code: 'en',
-    iso: 'en-US',
-    isCatchallLocale: true,
+    name: 'English',
+    file: 'en.json',
   },
   {
     code: 'es',
-    iso: 'es-ES',
-  },
-  {
-    code: 'it',
-    iso: 'it',
-  },
-  {
-    code: 'ja',
-    iso: 'ja',
-  },
-  {
-    code: 'zh',
-    iso: 'zh',
+    name: 'Español',
+    file: 'es.json',
   },
 ]
 
