@@ -56,7 +56,10 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', 'nuxt-gtag'],
+  gtag: {
+    id: 'GTM-KX4HLZQ7',
+  },
   i18n: {
     lazy: true,
     langDir: 'locales',
