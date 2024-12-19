@@ -1,13 +1,13 @@
 <template>
   <a
-    v-if="release.platform"
+    v-if="release && release.downloadName"
     class="link"
     :href="release.releaseUrl"
     target="_blank"
     :download="release.downloadName"
   >
     <button class="btn">
-      <i18n-t keypath="download" tag="span">
+      <i18n-t keypath="downloadLink" tag="span">
         <template #platform>
           <span>{{ release.platform }}</span>
         </template>
@@ -17,15 +17,39 @@
   <a
     v-else
     class="link"
-    href="https://github.com/witnet/sheikah/releases/latest"
+    :href="release ? release.releaseUrl : GITHUB_RELEASE_URL"
   >
-    <button class="btn">{{ $t('head.title') }}</button>
+    <button class="btn">
+      <i18n-t v-if="release" keypath="downloadLink" tag="span">
+        <template #platform>
+          <span>{{ release?.platform }}</span>
+        </template>
+      </i18n-t>
+      <span v-else>{{ t('githubLink') }}</span>
+    </button>
   </a>
 </template>
 
-<script setup>
-import { getLatestRelease } from '../getLatestRelease'
-const release = await getLatestRelease(navigator)
+<script setup lang="ts">
+import {
+  getLatestRelease,
+  type LatestReleaseResponse,
+} from '@/getLatestRelease'
+import { getBrowserOs } from '@/getBrowserOs'
+import { useI18n } from 'vue-i18n'
+import { GITHUB_RELEASE_URL, URL_RELEASE_BASE } from '@/constants'
+import { computed, type Ref } from 'vue'
+const { t } = useI18n()
+
+const { data }: { data: Ref<LatestReleaseResponse | undefined> } =
+  await useFetch(URL_RELEASE_BASE)
+
+const os = computed(() => getBrowserOs(navigator))
+
+const downloadRelease = computed(() =>
+  os.value ? getLatestRelease({ os: os.value, data: data.value }) : null,
+)
+const release = computed(() => downloadRelease.value)
 </script>
 
 <style lang="scss">

@@ -11,6 +11,8 @@
     "wallet": "Wallet"
   },
   "title": "Get Sheikah,{0}your Witnet wallet.",
+  "downloadLink": "Download Sheikah for {platform}",
+  "githubLink": "Download Sheikah",
   "download": "Download Sheikah for {platform}",
   "source_code": "Check out the source code on {github}"
 }
