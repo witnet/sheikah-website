@@ -11,7 +11,7 @@ export default createConfigForNuxt().prepend(
   ...pluginVue.configs["flat/strongly-recommended"],
   eslintConfigPrettier,
   {
-    ignores: ['node_modules', 'dist', 'public', '.nuxt', 'docs/**/*', 'DEBUG=1/**/*', '.output', 'docs/_nuxt/*'],
+    ignores: ['node_modules', 'dist', 'public', '.nuxt', 'docs/**/*', 'DEBUG=1/**/*', '.output', 'docs/_nuxt/*', 'pnpm-lock.yaml'],
   },
   {
     files: ['pages/*.vue'],
