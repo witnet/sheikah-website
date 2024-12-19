@@ -85,4 +85,5 @@ export default defineNuxtConfig({
   },
   css: ['~/styles/main.scss'],
   components: true,
+  compatibilityDate: '2024-12-19',
 })

@@ -55,8 +55,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/styles/colors.scss';
-
 .container {
   margin: 0 auto;
   height: calc(var(--vh, 1vh) * 100);

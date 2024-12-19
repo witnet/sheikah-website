@@ -4,7 +4,6 @@
   </svg>
 </template>
 <style lang="scss" scoped>
-@import '@/styles/colors.scss';
 .spinner {
   width: 100px;
   height: auto;

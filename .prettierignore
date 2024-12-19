@@ -1,9 +1,29 @@
-node_modules
-pnpm-lock.yaml
-*.log*
-.nuxt
-.nitro
-.cache
-.output
+# Ignore build output directories
+.nuxt/
+dist/
+./docs/** */
+./docs/_nuxt/** */
+DEBUG=1/** */
+# Ignore node modules
+node_modules/
+# Ignore specific configuration files
+*.config.js
+# Ignore environment variables files
 .env
-dist
+.env.*
+# Ignore lock files
+yarn.lock
+package-lock.json
+# Ignore logs
+*.log
+# Ignore compiled files
+*.min.js
+*.min.css
+# Ignore specific file types
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+# Ignore other generated files
+coverage/
