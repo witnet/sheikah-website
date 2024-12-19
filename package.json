@@ -31,9 +31,6 @@
     "typescript-eslint": "^8.18.1",
     "user-agent-data-types": "^0.4.2"
   },
-  "dependencies": {
-    "axios": "^1.4.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com:witnet/sheikah-website.git"
